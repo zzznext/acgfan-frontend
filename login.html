@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <link rel="stylesheet" href="./dependences/zui/zui.css">
+</head>
+<body>
+<div class="container">
+    <div class="acg-nav">
+        <menu class="nav pt-3">
+            <li class="nav-heading">acgfan</li>
+            <li class="item nav-item"><a class="active"><i class="icon icon-home"></i><span class="text">首页</span></a></li>
+            <li class="item nav-item"><a><span class="text">最新</span></a></li>
+            <li class="item nav-item"><a><span class="text">火热</span></a></li>
+            <!--                <li class="item nav-item"><a class="disabled"><span class="text">acgfan</span></a></li>-->
+            <li class="item nav-item">
+                <a data-toggle="dropdown" href="#navDropdown">
+                    <span class="text">更多</span><span class="caret"></span>
+                </a>
+            </li>
+            <li class="nav-space"></li>
+            <li>
+                <div id="searchBox"></div>
+            </li>
+            <li class="nav-space w-4 flex-none"></li>
+            <li class="toolbar gap-2">
+                <a href="./login.html">
+                    <button type="button" class="btn primary-outline bg-none" >登录</button>
+                </a>
+
+                <button type="button" class="btn primary">注册</button>
+            </li>
+        </menu>
+        <menu id="navDropdown" class="dropdown-menu menu">
+            <li class="menu-item"><a><span class="text">博客</span></a></li>
+            <li class="menu-item"><a><span class="text">项目</span></a></li>
+            <li class="menu-item"><a><span class="text">关于我们</span></a></li>
+        </menu>
+    </div>
+    <div class="w-3/6" style="margin: 10% auto">
+        <form class="form">
+            <fieldset>
+                <legend><div class="form-title">账号信息</div></legend>
+                <div class="form-group">
+                    <label class="form-label" for="exampleInputAccount3">账号</label>
+                    <input type="text" class="form-control" id="exampleInputAccount3" placeholder="电子邮件/手机号/用户名">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">密码</label>
+                    <input type="password" class="form-control" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><div class="form-title">额外内容</div></legend>
+                <div class="check-list">
+                    <label class="checkbox">
+                        <input type="checkbox" name="loginCheckbox1"> 我阅读并同意<a href="#" target="_blank">隐私政策</a>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="loginCheckbox2"> 我阅读并同意<a href="#" target="_blank">用户协议</a>
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit" class="btn primary btn-wide">提交</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<script src="./dependences/zui/zui.js"></script>
+</body>
+</html>

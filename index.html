@@ -6,15 +6,52 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./dependence/zui/zui.css">
+    <link rel="stylesheet" href="./dependences/zui/zui.css">
+    <link rel="stylesheet" href="./statics/css/index.css">
 </head>
-<body> 
-<div class="container">
-    <h1>hello word!!!</h1>
-    <p>this is a html page</p>
+<body>
+
+<div class="acg-main text-lg">
+
+    <div class="container">
+        <div class="acg-nav">
+            <menu class="nav pt-3">
+                <li class="nav-heading">acgfan</li>
+                <li class="item nav-item"><a class="active"><i class="icon icon-home"></i><span class="text">首页</span></a></li>
+                <li class="item nav-item"><a><span class="text">最新</span></a></li>
+                <li class="item nav-item"><a><span class="text">火热</span></a></li>
+<!--                <li class="item nav-item"><a class="disabled"><span class="text">acgfan</span></a></li>-->
+                <li class="item nav-item">
+                    <a data-toggle="dropdown" href="#navDropdown">
+                        <span class="text">更多</span><span class="caret"></span>
+                    </a>
+                </li>
+                <li class="nav-space"></li>
+                <li>
+                    <div id="searchBox"></div>
+                </li>
+                <li class="nav-space w-4 flex-none"></li>
+                <li class="toolbar gap-2">
+                    <a href="./login.html">
+                        <button type="button" class="btn primary-outline bg-none" >登录</button>
+                    </a>
+
+                    <button type="button" class="btn primary">注册</button>
+                </li>
+            </menu>
+            <menu id="navDropdown" class="dropdown-menu menu">
+                <li class="menu-item"><a><span class="text">博客</span></a></li>
+                <li class="menu-item"><a><span class="text">项目</span></a></li>
+                <li class="menu-item"><a><span class="text">关于我们</span></a></li>
+            </menu>
+        </div>
+        <h1>hello word!!!</h1>
+        <p>this is a html page</p>
+    </div>
 </div>
 
-<script src="./dependence/zui/zui.js"></script>
+<script src="./dependences/zui/zui.js"></script>
+<script src="./statics/js/index.js"></script>
 </body>
 </html>
 
