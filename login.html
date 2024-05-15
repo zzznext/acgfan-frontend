@@ -42,7 +42,7 @@
         </menu>
     </div>
     <div class="w-3/6" style="margin: 10% auto">
-        <form class="form">
+        <form class="form" id="loginForm">
             <fieldset>
                 <legend><div class="form-title">账号信息</div></legend>
                 <div class="form-group">
@@ -58,22 +58,36 @@
                 <legend><div class="form-title">额外内容</div></legend>
                 <div class="check-list">
                     <label class="checkbox">
-                        <input type="checkbox" name="loginCheckbox1"> 我阅读并同意<a href="#" target="_blank">隐私政策</a>
+                        <input type="checkbox" name="loginCheckbox1" id="privacyPolicy"> 我阅读并同意<a href="#" target="_blank">隐私政策</a>
                     </label>
                     <label class="checkbox">
-                        <input type="checkbox" name="loginCheckbox2"> 我阅读并同意<a href="#" target="_blank">用户协议</a>
+                        <input type="checkbox" name="loginCheckbox2" id="userAgreement"> 我阅读并同意<a href="#" target="_blank">用户协议</a>
                     </label>
                 </div>
             </fieldset>
             <div class="form-actions">
-                <button type="submit" class="btn primary btn-wide">提交</button>
+                <button type="submit" class="btn primary btn-wide">登录</button>
             </div>
         </form>
     </div>
-
 </div>
 
-
 <script src="./dependences/zui/zui.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#loginForm').on('submit', function(event) {
+            var privacyPolicyChecked = $('#privacyPolicy').prop('checked');
+            var userAgreementChecked = $('#userAgreement').prop('checked');
+
+            if (!privacyPolicyChecked || !userAgreementChecked) {
+                event.preventDefault();
+                alert('请阅读并同意隐私政策和用户协议');
+            } else {
+                // 此处可以添加向后端提交表单的代码
+                // 例如：使用 AJAX 提交表单
+            }
+        });
+    });
+</script>
 </body>
 </html>
